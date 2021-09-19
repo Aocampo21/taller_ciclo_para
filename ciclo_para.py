@@ -23,7 +23,7 @@ roja = 0
 verde = 0
 azul = 0
 for i in range(0, auto):
-    digito = int((input("Digite el último número de la placa")))
+    digito = int((input("Digite el último número de la placa: ")))
     if digito == 1 or digito == 2:
         amarilla = amarilla+1
     if digito == 3 or digito == 4:
@@ -136,3 +136,28 @@ for i in range(1, 6):
      print("El miembro bajó: ", peso_anterior - (peso/10), " kilos.")
     if(peso_anterior-peso > 0):
      print("El miembro subió: ", peso_anterior - (peso/10), " kilos.")
+
+""" En un supermercado una ama de casa pone en su carrito los artículos que
+va tomando de los estantes. La señora quiere asegurarse de que el cajero
+le cobre bien lo que ella ha comprado, por lo que cada vez que toma un
+artóculo anota su precio junto con la cantidad de artículos iguales que ha
+tomado y determina cuanto dinero gastará en ese artículo; a esto le suma lo
+que irá gastando en los demás artículos, hasta que decide que ya tomó
+todo lo que necesitaba. Ayúdele a esta señora a obtener el total de su
+compra."""
+
+f = 1
+total = 0
+
+while (f == 1):
+    f = int((input("Llevara otro artículo? 1 para sí, 2 para no: ")))
+    if f == 1:
+        precio = int(input('Cuál es el precio del artículo? '))
+        cantidad = int(input('Qué cantidad llevará?'))
+        total += precio * cantidad
+    else:
+        f = 0
+
+print("El total de la compra es: ", total)
+
+
