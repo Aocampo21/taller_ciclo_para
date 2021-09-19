@@ -40,3 +40,35 @@ print("El número de calcomanías Rosas es: ", rosa)
 print("El número de calcomanías Rojas es: ", roja)
 print("El número de calcomanías Verdes es: ", verde)
 print("El número de calcomanías Azul es: ", azul)
+
+"""Un Zoólogo pretende determinar el porcentaje de animales que hay en las
+siguiente categorias de edades: 0 a 1 año, de mas de 1 año y menos de 3 y
+de 3 o mas años. El zoológico todavía no está seguro del animal que va
+estudiar. Si se decide por elefantes solo tomará una muestra de 20 de ellos;
+si se decide por jirafas, tomara 15 de muestras y si son chompancés tomará
+40."""
+
+animales = 0
+edad1 = 0
+edad2 = 0
+edad3 = 0
+animal = str(input("Digite el animal a estudiar "))
+if (animal == "elefante"):
+    animales = 20
+if (animal == "jirafa"):
+    animales = 15
+if (animal == "chimpancés"):
+    animales = 40
+
+for i in range(0, animales):
+    dig = int((input("Digite la edad del animal ")))
+    if dig <= 1:
+        edad1 = edad1+1
+    if dig == 2:
+        edad2 = edad2+1
+    if dig >= 3:
+        edad3 = edad3+1
+
+print("El porcentaje de anímales entre 0 y 1 años es: ", edad1/animales * 100)
+print("El porcentaje de anímales de 2  años es: ", edad2/animales * 100)
+print("El porcentaje de anímales de más de 3 años es: ", edad3/animales * 100)
