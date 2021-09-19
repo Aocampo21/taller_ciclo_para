@@ -87,3 +87,21 @@ for i in range(0, obrero):
     if hora > 40:
         print("El salario de este obrero es: ", 800+((hora-40)*25))
 
+""" Calcular el promedio de edades de hombres, mujeres y de todo un grupo
+de alumnos."""
+
+hombres = int((input("Digite el número de hombres: ")))
+mujeres = int((input("Digite el número de mujeres: ")))
+curso = hombres + mujeres
+edadh = 0
+edadm = 0
+for i in range(0, hombres):
+    numh = int((input("Digite la edad del hombre número " + str(i)+": ")))
+    edadh = edadh + numh
+for j in range(0, mujeres):
+    num_m = int((input("Digite la edad de la mujer número " + str(j)+": ")))
+    edadm = edadm + num_m
+
+print("La edad promedio de los hombres es: ", edadh/hombres)
+print("La edad promedio de las mujeres es: ", edadm/mujeres)
+print("La edad promedio total del curso es: ", (edadh+edadm)/curso)
