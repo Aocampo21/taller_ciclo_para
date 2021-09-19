@@ -105,3 +105,14 @@ for j in range(0, mujeres):
 print("La edad promedio de los hombres es: ", edadh/hombres)
 print("La edad promedio de las mujeres es: ", edadm/mujeres)
 print("La edad promedio total del curso es: ", (edadh+edadm)/curso)
+
+# Encontrar el menor valor de un conjunto de n números dados
+
+numeros = int((input("Digite la cantidad de números: ")))
+menor = int((input("Digite el número 1: ")))
+for i in range(0, numeros-1):
+    num = int((input("Digite el número " + str(i+2)+": ")))
+    if menor > num:
+        menor = num
+
+print("El número menor es: ", menor)
