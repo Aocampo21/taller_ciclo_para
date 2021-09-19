@@ -160,4 +160,52 @@ while (f == 1):
 
 print("El total de la compra es: ", total)
 
+""" Un teatro otorga descuentos según la edad del cliente, determinar la
+cantidad del dinero que el teatro deja de percibir por cada una de las
+categorias. Tomar en cuenta que los niños menores de 5 años no pueden
+entrar al teatro y que existe un precio único en los asientos. Los descuentos
+se hacen tomando en cuenta el siguiente cuadro:
+Edad % Descuento
+5 – 14 35%
+15-19 25%
+20 – 45 10%
+46 – 65 25%
+66 en Adelante 35%"""
+
+precio_boleta = int(input("Digite el precio de la boleta "))
+num_personas = int(input("digite el número de personas "))
+rango1 = 0
+rango2 = 0
+rango3 = 0
+rango4 = 0
+rango5 = 0
+for i in range(0, num_personas):
+    edad = int(input("Digite la edad de la persona "))
+    if edad < 5:
+        print("Los niños menores de 5 años no pueden entrar")
+        i -= 1
+    if edad > 5 and edad <= 14:
+        rango1 += 1
+    if edad > 15 and edad <= 19:
+        rango2 += 1
+    if edad > 20 and edad <= 45:
+        rango3 += 1
+    if edad > 46 and edad <= 65:
+        rango4 += 1
+    if edad > 66:
+        rango5 += 1
+
+print('El dinero perdido por el descuento en la categoría 5-14 es: ',
+      rango1*precio_boleta*0.35)
+print('El dinero perdido por el descuento en la categoría 15-20 es: ',
+      rango2*precio_boleta*0.25)
+print('El dinero perdido por el descuento en la categoría 20-45 es: ',
+      rango3*precio_boleta*0.10)
+print('El dinero perdido por el descuento en la categoría 46-65 es: ',
+      rango4*precio_boleta*0.25)
+print('El dinero perdido por el descuento en la categoría 66-adelante es: ',
+      rango5*precio_boleta*0.35)
+
+
+
 
