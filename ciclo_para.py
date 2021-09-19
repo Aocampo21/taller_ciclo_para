@@ -41,12 +41,12 @@ print("El número de calcomanías Rojas es: ", roja)
 print("El número de calcomanías Verdes es: ", verde)
 print("El número de calcomanías Azul es: ", azul)
 
-"""Un Zoólogo pretende determinar el porcentaje de animales que hay en las
+""" Un Zoólogo pretende determinar el porcentaje de animales que hay en las
 siguiente categorias de edades: 0 a 1 año, de mas de 1 año y menos de 3 y
 de 3 o mas años. El zoológico todavía no está seguro del animal que va
 estudiar. Si se decide por elefantes solo tomará una muestra de 20 de ellos;
 si se decide por jirafas, tomara 15 de muestras y si son chompancés tomará
-40."""
+40. """
 
 animales = 0
 edad1 = 0
@@ -72,3 +72,18 @@ for i in range(0, animales):
 print("El porcentaje de anímales entre 0 y 1 años es: ", edad1/animales * 100)
 print("El porcentaje de anímales de 2  años es: ", edad2/animales * 100)
 print("El porcentaje de anímales de más de 3 años es: ", edad3/animales * 100)
+
+""" Una empresa se requiere calcular el salario semanal de cada uno de los n
+obreros que laboran en ella. El salario se obtiene de la siguiente forma:
+a. Si el obrero trabaja 40 horas o menos se le paga $20 por hora
+b. Si trabaja mas de 40 horas se le paga $20 por cada una de
+las primeras 40 horas y $25 por cada hora extra. """
+
+obrero = int((input("Ingrese el número de trabajadores: ")))
+for i in range(0, obrero):
+    hora = int((input("Ingrese las horas trabajadas: ")))
+    if hora <= 40:
+        print("El salario de este obrero es: ", hora*20)
+    if hora > 40:
+        print("El salario de este obrero es: ", 800+((hora-40)*25))
+
