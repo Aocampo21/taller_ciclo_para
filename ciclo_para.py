@@ -131,11 +131,11 @@ peso = 0
 for i in range(1, 6):
     peso_anterior = int((input("Digite el peso anterior del miembro n°" + str(i)+": ")))
     for j in range(1, 11):
-     peso += int((input("Digite el peso de la báscula n°"+ str(j)+ " del miembro " + str(i)+": ")))     
+        peso += int((input("Digite el peso de la báscula n°"+ str(j)+ " del miembro " + str(i)+": ")))     
     if(peso_anterior-peso < 0):
-     print("El miembro bajó: ", peso_anterior - (peso/10), " kilos.")
+        print("El miembro bajó: ", peso_anterior - (peso/10), " kilos.")
     if(peso_anterior-peso > 0):
-     print("El miembro subió: ", peso_anterior - (peso/10), " kilos.")
+        print("El miembro subió: ", peso_anterior - (peso/10), " kilos.")
 
 """ En un supermercado una ama de casa pone en su carrito los artículos que
 va tomando de los estantes. La señora quiere asegurarse de que el cajero
@@ -206,6 +206,24 @@ print('El dinero perdido por el descuento en la categoría 46-65 es: ',
 print('El dinero perdido por el descuento en la categoría 66-adelante es: ',
       rango5*precio_boleta*0.35)
 
+""" Kia Autos premia anualmente a sus mejores vendedores de acuerdo a la
+siguiente tabla:
+Valor vendido Comisión
+Menor o igual que 20 Millones - 10%
+Mayor de 20 Millones y menor de 40 Millones - 15%
+Mayor o igual de 40 Millones y menor de 80 Millones - 20%
+Mayor o igual de 80 millones y menor de 160 Millones - 25%
+De 160 Millones en adelante - 30%"""
 
-
-
+for i in range(0, 100):
+        venta = int(input("Digite cuanto vendió el empleado número "+ str(i)+" en millones de pesos "))
+        if(venta < 20):
+            print("La comisión del empleado " + str(i)+"fue de ", venta*0.1)
+        if(venta < 40 and venta > 20):
+            print("La comisión del empleado " + str(i)+"fue de ", venta*0.15)
+        if(venta < 80 and venta >= 40):
+            print("La comisión del empleado " + str(i)+"fue de ", venta*0.20)
+        if(venta < 160 and venta >= 80):
+            print("La comisión del empleado " + str(i)+"fue de ", venta*0.25)
+        if(venta > 160):
+            print("La comisión del empleado " + str(i)+"fue de ", venta*0.30)
